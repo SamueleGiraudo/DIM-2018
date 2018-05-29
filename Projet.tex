@@ -1,0 +1,116 @@
+% Author: Nicolas Borie, Matthieu Josuat-Vergès, Samuele Giraudo
+% Creation: may. 2018
+% Modifications: may. 2018
+
+\documentclass[10pt,reqno]{amsart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8x]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,shuffle}
+\usepackage[T1]{fontenc}
+\usepackage[math]{anttor}
+
+% Layout.
+\usepackage[top=3.5cm,bottom=3.5cm,left=3.6cm,right=3.6cm]{geometry}
+
+% Colors of hyperlinks.
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hyperindex=true,frenchlinks=true,colorlinks=true,
+citecolor=BrickRed,linkcolor=Gray,urlcolor=Gray,linktocpage,
+pagebackref=true]{hyperref}
+
+% Tikz.
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usetikzlibrary{fit}
+\usetikzlibrary{decorations.pathmorphing}
+
+% Misc.
+\usepackage{mathtools}
+\usepackage{dsfont}
+\usepackage{wasysym}
+\usepackage{stmaryrd}
+\usepackage{cite}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{cancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Line space.
+\linespread{1.15}
+\renewcommand{\arraystretch}{1.4}
+
+% Vertical space for equations.
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+
+% Alphabetic footnote marks.
+\renewcommand{\thefootnote}{\alph{footnote}}
+
+% To allow cutting equations in several pages.
+\allowdisplaybreaks
+
+% Numbering of equations.
+\numberwithin{equation}{subsection}
+
+% Depth of the table of contents.
+\setcounter{tocdepth}{2}
+
+% Indentation in the table of contents.
+\makeatletter
+\def\l@section{\@tocline{1}{3pt}{1pc}{5pc}{}}
+\def\l@subsection{\@tocline{2}{2pt}{2pc}{5pc}{}}
+\makeatother
+
+% Environments definitions.
+\newtheorem{Theorem}{Theorem}[subsection]
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Lemma}[Theorem]{Lemma}
+
+% Better comparison symbols.
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Projet DIM}
+\keywords{?}
+\subjclass[2010]{?}
+\date{\today}
+\author{Nicolas Borie \and Matthieu Josuat-Verg\`es \and Samuele Giraudo}
+\address{\scriptsize Université Paris-Est, LIGM (UMR $8049$), CNRS,
+    ENPC, ESIEE Paris, UPEM, F-$77454$, Marne-la-Vallée, France}
+\email{nicolas.borie@u-pem.fr}
+\email{matthieu.josuat-verges@u-pem.fr}
+\email{samuele.giraudo@u-pem.fr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\K}{\mathbb{K}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{alpha}
+\bibliography{Bibliography}
+
+\end{document}
