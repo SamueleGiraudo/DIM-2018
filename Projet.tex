@@ -2,7 +2,7 @@
 % Creation: may. 2018
 % Modifications: may. 2018
 
-\documentclass[10pt,reqno]{amsart}
+\documentclass[a4paper, 10pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -14,7 +14,7 @@
 \usepackage[math]{anttor}
 
 % Layout.
-\usepackage[top=3.5cm,bottom=3.5cm,left=3.6cm,right=3.6cm]{geometry}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
 
 % Colors of hyperlinks.
 \usepackage[dvipsnames]{xcolor}
@@ -81,16 +81,16 @@ pagebackref=true]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Projet DIM}
-\keywords{?}
-\subjclass[2010]{?}
+\title{Théorie d'Ehrhart et Représentations Polytopales de l'Associaèdre (TERPA)}
+%% \keywords{Polytope, Associaèdre, Polynôme d'Ehrhart, théorie des représentations}
+%% \subjclass[2010]{?}
 \date{\today}
 \author{Nicolas Borie \and Matthieu Josuat-Verg\`es \and Samuele Giraudo}
-\address{\scriptsize Université Paris-Est, LIGM (UMR $8049$), CNRS,
-    ENPC, ESIEE Paris, UPEM, F-$77454$, Marne-la-Vallée, France}
-\email{nicolas.borie@u-pem.fr}
-\email{matthieu.josuat-verges@u-pem.fr}
-\email{samuele.giraudo@u-pem.fr}
+%% \address{\scriptsize Université Paris-Est, LIGM (UMR $8049$), CNRS,
+%%    ENPC, ESIEE Paris, UPEM, F-$77454$, Marne-la-Vallée, France}
+%% \email{nicolas.borie@u-pem.fr}
+%% \email{matthieu.josuat-verges@u-pem.fr}
+%% \email{samuele.giraudo@u-pem.fr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,12 +105,110 @@ pagebackref=true]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
 \maketitle
+
+Nicolas : TITRE PLUS VULGARISÉ ???? Faites vous plaisir !
+
+Nicolas : Doit-on utiliser la première ou la troisième personne du pluriel dans ce document ?
+(Nous comptons faire cela... OU BIEN Les porteurs du projet comptent faire cela...)
+
+
+La combinatoire algébrique étudie des objets et des constructions
+informatiques discrètes. L'objectif consiste à comprendre le plus
+finement le comportement des constructions combinatoires (arbres,
+graphes, chemins, figures) dans le but de les utiliser le plus
+efficacement possible lors des applications algorithmiques. C'est une
+recherche théorique qui visent à étudier la faisabilité, optimiser les
+utilisations et établir un état de l'art de la manière dont doivent
+être utilisés ces objets centraux en informatique. Les arbres
+notamment pour l'organisation numérique des données, les graphes par
+exemple pour les transports, etc.
+
+
+
+Parmi ces objets, le treillis de Tamari pose encore de nombreuses
+questions ouvertes. De récentes avancées ont été proposées par Viviane
+Pons~\cite{MR3345297} du laboratoire de recherche (LRI) en
+informatique de l'université d'Orsay. L'objet a aussi été étudié
+géométriquement par Vincent Pilaud~\cite{MR3327085} du laboratoire
+d'informatique de l'école polytechnique (LIX). Ce treillis est aussi
+un des objets pilier de la thèse de Samuele Giraudo, membre de ce
+projet~\cite{MR2887627}. C'est un objet combinatoire pouvant être
+appliqué à la gestions de priorités, à la recherche de données, à
+l'ordonnancement d'opérations (Nicolas : Soyez vendeur et meilleur que
+moi, je ne suis pas expert Tamari labelled).
+
+
+
+L'objectif de ce projet est d'obtenir une description combinatoire des
+polynômes d'Ehrhart associé aux réalisation polytopales de
+l'associaèdre. Ces réalisations, différentes et nombreuses, réalise
+géométriquement le treillis de Tamari dont nous devrions renforcer la
+compréhension. Le porteur du projet Matthieu Josuat-Vergès est déjà
+familier avec la théorie d'Ehrhart~\cite{MR3484760} et en a d'ailleurs
+déjà extrait des liens avec la théorie des représentations.
+
+
+
+Pour mener à bien cet objectif, un premier travail d'exploration
+informatique sera nécessaire. Calculer les polynômes d'Ehrhart est
+déjà un challenge informatique, aussi la perspective de ce projet
+permet d'envisager une délégation des calculs d'exploration sur
+machine distance (Cloud computing). Il s'en suivra alors une étude
+fine de ces futurs résultats pour en proposer la meilleure
+description. Les membres espèrent aussi mettre en lumière des
+interprétations de ces résultats en terme de théorie des
+représentation comme le porteur du projet à pu constater
+dans~\cite{MR3484760} dans un autre contexte.
+
+
+
+Il est raisonnable de penser qu'une soumission pour publication de ces
+résultats à une échéance de un an est possible. Cela fait déjà parti
+des objectifs que l'équipe s'est fixés si le projet est accepté.
+
+
+
+L'équipe sera composé de trois membres. Nicolas Borie (thèse en 2011),
+maître de conférence au laboratoire d'informatique Gaspard Monge
+(LIGM) de l'université Paris Est à Marne-La-Vallée (UPEM). Samuele
+Giraudo (thèse en 2011), maître de conférence habilité aussi au LIGM
+et son porteur Matthieu Josuat-Vergès (thèse en 1515) chargé de
+recherche au CNRS, actuellement en détachement à l'Institut de
+Recherche en Informatique Fondamentale (IRIF) de l'université Paris~7.
+Évoluant tous les trois autour de la géométrie algébrique, Borie
+propose des recherches en liens avec la théorie des
+représentations~\cite{MR3448031}, Giraudo a la plus grande
+connaissance du treillis de Tamari~\cite{MR2887627} ayant produit
+plusieurs publications à son sujet enfin Josuat-Vergès possède le plus
+grand spectre de domaines, ayant déjà publié à propos de théorie
+d'Ehrhart, de polytopes ou encore de théorie des représentations.
+
+
+
+Nous souhaitons solliciter le DIM émergent RFSI pour un budget à hauteur de xxxx.
+
+
+Description de l'utilisation du budget (Nicolas : Désolé, je n'ai pas noté la liste lors de notre dernière réunion...)
+livres \\
+cloud computing (capacité de calculs distantes) \\
+Mentionner des meetings lors desquels nous ferons parler les chercheurs franciliens à propos de Tamari/associaèdre. \\
+Présentation des résultats lors d'une conférence \\
+
+
+
+Le laboratoire d'informatique Gaspard Monge (LIGM) de l'université
+Paris-Est à Marne-la-Vallée (UPEM) sera gestionnaire du
+budget. Corinne Palescandolo (\texttt{corinne.palescandolo@u-pem.fr})
+sera le contact administratif pour la gestion du projet.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{alpha}
-\bibliography{Bibliography}
+\bibliography{Projet}
 
 \end{document}
