@@ -87,7 +87,7 @@ l'associaèdre (TERPA)}
 %% \keywords{Polytope, Associaèdre, Polynôme d'Ehrhart, théorie des représentations}
 %% \subjclass[2010]{?}
 \date{\today}
-\author{Nicolas Borie \and Matthieu Josuat-Verg\`es \and Samuele Giraudo}
+\author{Nicolas Borie \and Samuele Giraudo \and Matthieu Josuat-Verg\`es}
 %% \address{\scriptsize Université Paris-Est, LIGM (UMR $8049$), CNRS,
 %%    ENPC, ESIEE Paris, UPEM, F-$77454$, Marne-la-Vallée, France}
 %% \email{nicolas.borie@u-pem.fr}
@@ -114,18 +114,36 @@ l'associaèdre (TERPA)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Informations pratiques}
-Le porteur du projet est Matthieu Josuat-Vergès.
+
+\subsection*{Composition de l'équipe}
+\begin{center}
+\begin{tabular}{c|c|c}
+    {\bf Membre} & {\bf Fonction} & {\bf Soutence de thèse} \\ \hline
+    N. Borie & Maître de conférences & 2011 \\
+    S. Giraudo & Maître de conférences & 2011 \\
+    M. Josuat-Vergès & Chargé de recherche & 2010
+\end{tabular}
+\end{center}
+Évoluant tous les trois autour de la combinatoire algébrique, N. Borie
+propose des recherches en liens avec la théorie des
+représentations~\cite{MR3448031}. S. Giraudo a la plus grande
+connaissance du treillis de Tamari~\cite{MR2887627} ayant produit
+plusieurs publications à son sujet. Enfin M. Josuat-Vergès possède le plus
+grand spectre de domaines, ayant déjà contribué à la théorie
+d'Ehrhart, de polytopes ou encore à la théorie des représentations.
 \medbreak
 
-Le laboratoire d'informatique Gaspard Monge (LIGM) de l'université
-Paris-Est à Marne-la-Vallée (UPEM) sera gestionnaire du
-budget.
-\medbreak
+\subsection*{Porteur du projet}
+Matthieu Josuat-Vergès.
 
-Corinne Palescandolo
-(\href{mailto:corinne.palescandolo@u-pem.fr}
-{\tt corinne.palescandolo@u-pem.fr})
-sera le contact administratif pour la gestion du projet.
+\subsection*{Laboratoire gestionnaire du budget}
+    Laboratoire d'Informatique Gaspard Monge (LIGM)
+    de l'université Paris-Est à Marne-la-Vallée (UPEM).
+
+\subsection*{Contact administratif}
+    Corinne Palescandolo
+    (\href{mailto:corinne.palescandolo@u-pem.fr}
+    {\tt corinne.palescandolo@u-pem.fr})
 \medbreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,84 +151,85 @@ sera le contact administratif pour la gestion du projet.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Description du projet}
 
-Nicolas : TITRE PLUS VULGARISÉ ???? Faites vous plaisir !
+%Nicolas : TITRE PLUS VULGARISÉ ???? Faites vous plaisir !
 
-Nicolas : Doit-on utiliser la première ou la troisième personne du pluriel dans ce document ?
-(Nous comptons faire cela... OU BIEN Les porteurs du projet comptent faire cela...)
-Matthieu : Je préfère "nous".
+%Nicolas : Doit-on utiliser la première ou la troisième personne du pluriel dans ce document ?
+%(Nous comptons faire cela... OU BIEN Les porteurs du projet comptent faire cela...)
+%Matthieu : Je préfère "nous".
+% Samuele : même avis que Matthieu.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Contexte}
 La combinatoire algébrique étudie des objets et des constructions
 informatiques discrètes. L'objectif consiste à comprendre le plus
-finement le comportement des constructions combinatoires (arbres,
-graphes, chemins, figures) dans le but de les utiliser le plus
-efficacement possible lors des applications algorithmiques. C'est une
-recherche théorique qui visent à étudier la faisabilité, optimiser les
-utilisations et établir un état de l'art de la manière dont doivent
-être manipulés ces objets centraux en informatique. Les arbres
-notamment pour l'organisation numérique des données, les graphes par
-exemple pour les transports, etc.
-
-
+finement possible le comportement des constructions combinatoires
+(mots, arbres, graphes, chemins, figures, {\em etc.}) dans le but de
+les utiliser le plus efficacement possible lors des applications
+algorithmiques. C'est une recherche théorique qui vise à étudier la
+faisabilité, optimiser les utilisations et établir un état de l'art de
+la manière dont ces objets centraux en informatique peuvent être
+manipulés. Les arbres notamment le sont pour l'organisation numérique
+des données, les graphes pour les transports, {\em etc.}
+\medbreak
 
 Parmi ces objets, le treillis de Tamari pose encore de nombreuses
-questions ouvertes. De récentes avancées ont été proposées par Viviane
-Pons~\cite{MR3345297} du laboratoire de recherche (LRI) en
-informatique de l'université d'Orsay. L'objet a aussi été étudié
-géométriquement par Vincent Pilaud~\cite{MR3327085} du laboratoire
-d'informatique de l'école polytechnique (LIX). Ce treillis est aussi
-un des objets pilier de la thèse de Samuele Giraudo, membre de ce
-projet~\cite{MR2887627}. C'est un objet combinatoire pouvant être
-appliqué à la gestions de priorités, à la recherche de données, à
-l'ordonnancement d'opérations (Nicolas : Soyez vendeur et meilleur que
-moi, je ne suis pas expert Tamari labelled).
+questions ouvertes. Il s'agit d'une structure d'ordre combinatoire qui
+fait intervenir les arbres binaires et leur opération dite de rotation.
+Cette structure a été introduite historiquement par Dov
+Tamari~\cite{Tam62} dans un contexte algébrique et a été depuis
+redécouverte dans un contexte algorithmique~\cite{Knu98}, notamment
+par les liens qu'il entretient avec les arbres binaires
+équilibrés~\cite{AVL62}. Ce treillis est l'un des objets centraux de la
+thèse de Samuele Giraudo, membre de ce projet~\cite{MR2887627}. Des
+travaux récents ont contribué à sa compréhension. l'étude du treillis
+de Tamari. Parmi eux, l'un de de nature combinatoire a été amené par
+Viviane Pons~\cite{MR3345297} du laboratoire de recherche (LRI) en
+informatique de l'université d'Orsay, et un autre, de nature
+géométrique, a été poursuivi par Vincent Pilaud~\cite{MR3327085} du
+laboratoire d'informatique de l'école polytechnique (LIX).
+\medbreak
 
-
-
-L'objectif de ce projet est d'obtenir une description combinatoire des
-polynômes d'Ehrhart associé aux réalisation polytopales de
-l'associaèdre. Ces réalisations, différentes et nombreuses, réalise
-géométriquement le treillis de Tamari dont nous devrions renforcer la
-compréhension. Le porteur du projet Matthieu Josuat-Vergès est déjà
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sujet de recherche}
+Un fait remarquable du treillis de Tamari est qu'il est possible de
+le réaliser comme une figure géométrique en haute dimension, connue
+sous le nom d'associaèdre~\cite{MR2108555}. L'objectif de ce projet est
+d'obtenir une description combinatoire des polynômes d'Ehrhart associé
+aux différentes réalisations géométriques du treillis de Tamari.
+À tout polytope correspond un polynôme d'Ehrhart qui encode un certain
+nombre d'information sur celui-ci, comme son volume. Notre projet est
+de calculer les polynômes d'Ehrhart des différentes réalisations
+géométriques du treillis de Tamari et de s'en servir comme tremplin
+à des découvertes nouvelles de ses propriétés algorithmiques et
+combinatoires. Le porteur du projet Matthieu Josuat-Vergès est déjà
 familier avec la théorie d'Ehrhart~\cite{MR3484760} et en a d'ailleurs
 déjà extrait des liens avec la théorie des représentations.
+\medbreak
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Méthode de travail}
 Pour mener à bien cet objectif, un premier travail d'exploration
 informatique sera nécessaire. Calculer les polynômes d'Ehrhart est
-déjà un challenge informatique, aussi la perspective de ce projet
+déjà un défi informatique, aussi la perspective de ce projet
 permet d'envisager une délégation des calculs d'exploration sur
-machine distance (Cloud computing). Il s'en suivra alors une étude
+machine distance (cloud computing). Il s'en suivra alors une étude
 fine de ces futurs résultats pour en proposer la meilleure
-description. Les membres espèrent aussi mettre en lumière des
+description. Nous espérons aussi mettre en lumière des
 interprétations de ces résultats en terme de théorie des
-représentation comme le porteur du projet à pu constater
+représentations comme le porteur du projet à pu constater
 dans~\cite{MR3484760} dans un autre contexte.
+\medbreak
 
-
-
-Il est raisonnable de penser qu'une soumission pour publication de ces
-résultats à une échéance de un an est possible. Cela fait déjà parti
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Résultats attendus}
+Il est raisonnable de viser à une soumission pour publication de ces
+résultats dans un délai d'un an environ. Cela fait déjà partie
 des objectifs que l'équipe s'est fixés si le projet est accepté.
-
-
-
-L'équipe sera composé de trois membres. Nicolas Borie (thèse en 2011),
-maître de conférence au laboratoire d'informatique Gaspard Monge
-(LIGM) de l'université Paris Est à Marne-La-Vallée (UPEM). Samuele
-Giraudo (thèse en 2011), maître de conférence habilité aussi au LIGM
-et son porteur Matthieu Josuat-Vergès (thèse en 2010) chargé de    % Gnagna très marrant 1515
-recherche au CNRS, actuellement membre associé à l'Institut de
-Recherche en Informatique Fondamentale (IRIF) de l'université Paris~7.
-Évoluant tous les trois autour de la combinatoire algébrique, Borie  % Géométrie algébrique, vraiment ?
-propose des recherches en liens avec la théorie des
-représentations~\cite{MR3448031}, Giraudo a la plus grande
-connaissance du treillis de Tamari~\cite{MR2887627} ayant produit
-plusieurs publications à son sujet enfin Josuat-Vergès possède le plus
-grand spectre de domaines, ayant déjà publié à propos de théorie
-d'Ehrhart, de polytopes ou encore de théorie des représentations.
-
-
+\medbreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
