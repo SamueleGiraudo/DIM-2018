@@ -11,7 +11,8 @@
 \usepackage[french]{babel}
 \usepackage{amsmath,amsfonts,amssymb,amsthm,shuffle}
 \usepackage[T1]{fontenc}
-\usepackage[math]{anttor}
+%\usepackage[math]{anttor}
+\usepackage{lmodern}
 
 % Layout.
 \usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
@@ -45,7 +46,7 @@ pagebackref=true]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Line space.
-\linespread{1.15}
+\linespread{1.0}
 \renewcommand{\arraystretch}{1.4}
 
 % Vertical space for equations.
@@ -83,7 +84,9 @@ pagebackref=true]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Théorie d'Ehrhart et représentations polytopales de
-l'associaèdre (TERPA)}
+l'associaèdre (TERPA)} % SG : joli, mais un peu long (2 lignes !!).
+\title{{\bf P}olynômes d'{\bf E}hrhart des {\bf a}ssociaèdre{\bf s}
+(PEAS)}
 %% \keywords{Polytope, Associaèdre, Polynôme d'Ehrhart, théorie des représentations}
 %% \subjclass[2010]{?}
 \date{\today}
@@ -109,132 +112,137 @@ l'associaèdre (TERPA)}
 \begin{document}
 
 \maketitle
+\vspace{-1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Informations pratiques}
-
-\subsection*{Composition de l'équipe}
+\section*{\center Informations pratiques}
+Notre équipe se compose des membres suivants~:
 \begin{center}
-\begin{tabular}{c|c|c}
-    {\bf Membre} & {\bf Fonction} & {\bf Soutence de thèse} \\ \hline
-    N. Borie & Maître de conférences & 2011 \\
-    S. Giraudo & Maître de conférences & 2011 \\
-    M. Josuat-Vergès & Chargé de recherche & 2010
+\begin{tabular}{|c|c|c|} \hline
+    {\bf Membre} & {\bf Fonction} & {\bf Soutence de thèse}
+        \\ \hline \hline
+    N. Borie & Maître de conférences & 2011 \\ \hline
+    S. Giraudo & Maître de conférences & 2011 \\ \hline
+    M. Josuat-Vergès & Chargé de recherche & 2010 \\ \hline
 \end{tabular}
 \end{center}
+\smallbreak
+
 Évoluant tous les trois autour de la combinatoire algébrique, N. Borie
-propose des recherches en liens avec la théorie des
-représentations~\cite{MR3448031}. S. Giraudo a la plus grande
-connaissance du treillis de Tamari~\cite{MR2887627} ayant produit
-plusieurs publications à son sujet. Enfin M. Josuat-Vergès possède le plus
-grand spectre de domaines, ayant déjà contribué à la théorie
-d'Ehrhart, de polytopes ou encore à la théorie des représentations.
-\medbreak
+mène des recherches en liens avec la théorie des
+représentations~\cite{Bor15}. S. Giraudo a la plus grande connaissance
+du treillis de Tamari~\cite{Gir12} ayant produit plusieurs publications
+à son sujet. Enfin M. Josuat-Vergès, porteur du projet, possède
+l'expertise du plus grand spectre de domaines, ayant déjà contribué à la
+théorie des polynômes d'Ehrhart~\cite{HJV16}, des polytopes ou encore à
+la théorie des représentations.
+\smallbreak
 
-\subsection*{Porteur du projet}
-Matthieu Josuat-Vergès.
+Le laboratoire gestionnaire du budget est le Laboratoire d'Informatique
+Gaspard Monge (LIGM) de l'université Paris-Est à Marne-la-Vallée (UPEM).
+Le contact administratif est Corinne Palescandolo, secrétaire au LIGM
+(\href{mailto:corinne.palescandolo@u-pem.fr}
+{\tt corinne.palescandolo@u-pem.fr}).
+\smallbreak
 
-\subsection*{Laboratoire gestionnaire du budget}
-    Laboratoire d'Informatique Gaspard Monge (LIGM)
-    de l'université Paris-Est à Marne-la-Vallée (UPEM).
-
-\subsection*{Contact administratif}
-    Corinne Palescandolo
-    (\href{mailto:corinne.palescandolo@u-pem.fr}
-    {\tt corinne.palescandolo@u-pem.fr})
-\medbreak
+\vspace{-1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Description du projet}
-
-%Nicolas : TITRE PLUS VULGARISÉ ???? Faites vous plaisir !
-
-%Nicolas : Doit-on utiliser la première ou la troisième personne du pluriel dans ce document ?
-%(Nous comptons faire cela... OU BIEN Les porteurs du projet comptent faire cela...)
-%Matthieu : Je préfère "nous".
-% Samuele : même avis que Matthieu.
+\section*{\center Description du projet}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Contexte}
-La combinatoire algébrique étudie des objets et des constructions
-informatiques discrètes. L'objectif consiste à comprendre le plus
-finement possible le comportement des constructions combinatoires
-(mots, arbres, graphes, chemins, figures, {\em etc.}) dans le but de
-les utiliser le plus efficacement possible lors des applications
-algorithmiques. C'est une recherche théorique qui vise à étudier la
-faisabilité, optimiser les utilisations et établir un état de l'art de
-la manière dont ces objets centraux en informatique peuvent être
-manipulés. Les arbres notamment le sont pour l'organisation numérique
-des données, les graphes pour les transports, {\em etc.}
-\medbreak
+\paragraph{Contexte.}
+En combinatoire algébrique, il est d'usage d'étudier des objets et des
+constructions informatiques discrètes.  Ce qui différencie la
+combinatoire algébrique des autres ramifications de la combinatoire est
+qu'elle utilise des outils provenant de l'algèbre. L'un des objectifs
+consiste à  comprendre le plus finement possible le comportement des
+constructions combinatoires courantes (mots, arbres, graphes, chemins,
+figures, {\em etc.}) dans le but de les utiliser avec le maximum
+d'efficacité lors des applications algorithmiques.
+\smallbreak
 
-Parmi ces objets, le treillis de Tamari pose encore de nombreuses
-questions ouvertes. Il s'agit d'une structure d'ordre combinatoire qui
+Parmi ces objets, le treillis de Tamari apporte son lot de questions
+ouvertes. Il s'agit d'une structure d'ordre partiel combinatoire qui
 fait intervenir les arbres binaires et leur opération dite de rotation.
 Cette structure a été introduite historiquement par Dov
 Tamari~\cite{Tam62} dans un contexte algébrique et a été depuis
-redécouverte dans un contexte algorithmique~\cite{Knu98}, notamment
-par les liens qu'il entretient avec les arbres binaires
+redécouverte dans un contexte algorithmique~\cite{Knu98}, notamment à
+travers les liens qu'il entretient avec les arbres binaires
 équilibrés~\cite{AVL62}. Ce treillis est l'un des objets centraux de la
-thèse de Samuele Giraudo, membre de ce projet~\cite{MR2887627}. Des
-travaux récents ont contribué à sa compréhension. l'étude du treillis
-de Tamari. Parmi eux, l'un de de nature combinatoire a été amené par
-Viviane Pons~\cite{MR3345297} du laboratoire de recherche (LRI) en
-informatique de l'université d'Orsay, et un autre, de nature
-géométrique, a été poursuivi par Vincent Pilaud~\cite{MR3327085} du
-laboratoire d'informatique de l'école polytechnique (LIX).
-\medbreak
+thèse de Samuele Giraudo, membre de ce projet~\cite{Gir12}. Des travaux
+récents ont contribué à sa compréhension. Parmi eux, l'un de nature
+combinatoire~\cite{CP15} a été amené par Viviane Pons%
+\footnote{Laboratoire de recherche en informatique de
+l'université d'Orsay (LRI).},
+et un autre, de nature géométrique~\cite{PS15}, a été poursuivi par
+Vincent Pilaud%
+\footnote{Laboratoire d'informatique de l'école polytechnique (LIX).}.
+\smallbreak
+
+\vspace{-.25cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Sujet de recherche}
-Un fait remarquable du treillis de Tamari est qu'il est possible de
-le réaliser comme une figure géométrique en haute dimension, connue
-sous le nom d'associaèdre~\cite{MR2108555}. L'objectif de ce projet est
-d'obtenir une description combinatoire des polynômes d'Ehrhart associé
-aux différentes réalisations géométriques du treillis de Tamari.
-À tout polytope correspond un polynôme d'Ehrhart qui encode un certain
-nombre d'information sur celui-ci, comme son volume. Notre projet est
-de calculer les polynômes d'Ehrhart des différentes réalisations
-géométriques du treillis de Tamari et de s'en servir comme tremplin
-à des découvertes nouvelles de ses propriétés algorithmiques et
+\paragraph{Sujet de recherche.}
+Un fait remarquable du treillis de Tamari est qu'il est possible de le
+réaliser comme une figure géométrique en haute dimension, connue sous le
+nom d'associaèdre~\cite{Lod04}. L'objectif de ce projet est d'obtenir
+une description combinatoire des polynômes d'Ehrhart associé aux
+différentes réalisations géométriques du treillis de Tamari. À tout
+polytope correspond un polynôme d'Ehrhart qui encode un certain nombre
+d'information sur celui-ci, comme son volume. Notre projet est de
+calculer les polynômes d'Ehrhart des différentes réalisations
+géométriques du treillis de Tamari et de s'en servir comme tremplin à
+des découvertes nouvelles de ses propriétés algorithmiques et
 combinatoires. Le porteur du projet Matthieu Josuat-Vergès est déjà
-familier avec la théorie d'Ehrhart~\cite{MR3484760} et en a d'ailleurs
-déjà extrait des liens avec la théorie des représentations.
-\medbreak
+familier avec la théorie d'Ehrhart~\cite{HJV16} et en a d'ailleurs déjà
+extrait des liens avec la théorie des représentations.
+\smallbreak
+
+\vspace{-.25cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Méthode de travail}
+\paragraph{Méthode de travail.}
 Pour mener à bien cet objectif, un premier travail d'exploration
-informatique sera nécessaire. Calculer les polynômes d'Ehrhart est
-déjà un défi informatique, aussi la perspective de ce projet
-permet d'envisager une délégation des calculs d'exploration sur
-machine distance (cloud computing). Il s'en suivra alors une étude
-fine de ces futurs résultats pour en proposer la meilleure
-description. Nous espérons aussi mettre en lumière des
-interprétations de ces résultats en terme de théorie des
-représentations comme le porteur du projet à pu constater
-dans~\cite{MR3484760} dans un autre contexte.
-\medbreak
+informatique sera nécessaire. Calculer les polynômes d'Ehrhart est déjà
+un défi informatique, aussi la perspective de ce projet permet
+d'envisager une délégation des calculs d'exploration sur machine
+distante (cloud computing). Il s'en suivra alors une étude fine de ces
+futurs résultats pour en proposer la meilleure description. Nous
+espérons aussi mettre en lumière des interprétations de ces résultats en
+terme de théorie des représentations comme le porteur du projet à pu
+constater dans~\cite{HJV16} dans un autre contexte.
+\smallbreak
+
+\vspace{-.25cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Résultats attendus}
+\paragraph{Résultats attendus.}
 Il est raisonnable de viser à une soumission pour publication de ces
-résultats dans un délai d'un an environ. Cela fait déjà partie
-des objectifs que l'équipe s'est fixés si le projet est accepté.
-\medbreak
+résultats dans un délai d'un an environ. Nous prévoyons une soumission
+d'un résumé étendu dans la conférence internationale FPSAC%
+\footnote{Formal PowerSeries and Algebraic Combinatorics
+(\url{http://fpsac.org/confs/fpsac-2019/}).}
+ainsi qu'une soumission d'une
+version complète de nos résultats dans un journal de combinatoire
+algébrique (à déterminer encore précisément selon la tournure de nos
+travaux).
+\smallbreak
+
+\vspace{-1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Projet d'utilisation du financement}
+\section*{\center Projet d'utilisation du financement}
 Nous envisageons la répartition suivante du budget~:
 \begin{itemize}
     \item {\bf achat de livres}, pour la constitution d'une petite
@@ -256,7 +264,10 @@ Nous envisageons la répartition suivante du budget~:
     première se fera lors du lancement du projet, en fin d'année 2018.
     L'objectif sera d'inviter des chercheurs principalement de
     laboratoires d'Île de France (Vincent Pilaud, Viviane Pons,
-    Bérénice Delcroix-Oger) afin de former un groupe de travail
+    Bérénice Delcroix-Oger%
+    \footnote{Institut de Recherche en Informatique Fondamentale
+    (IRIF).})
+    afin de former un groupe de travail
     (exposés, sessions de discussions et de recherche). Le budget
     nous servira à couvrir les déplacements et les repas. La
     seconde journée est prévue quelques mois avant la fin du
@@ -275,22 +286,23 @@ Nous envisageons la répartition suivante du budget~:
     \item {\bf participation à des conférences}, en vue de présenter
     nos résultats à des conférences internationales. La prochaine
     conférence pertinente à notre projet est FPSAC
-    (\url{http://fpsac.org/confs/fpsac-2019/}) et se déroula en Slovénie.
+     et se déroula en Slovénie.
     Nous pouvons ajouter à cela la prise en charge de déplacements
     éventuels des membres du projets pour mener à bien des collaborations
     éventuelles.
     Nous prévoyons pour cela entre 4500 € et 5500 € de frais~;
 \end{itemize}
-\medbreak
+\smallbreak
 
 Cela correspond à un total d'environ 11700 €.
-\medbreak
+\smallbreak
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{alpha}
+\bibliographystyle{plain}
+\begin{footnotesize}
 \bibliography{Projet}
+\end{footnotesize}
 
 \end{document}
